@@ -1,0 +1,69 @@
+@font-face {
+	font-family: "raleway";
+	src: url(fonts/raleway/raleway-Medium.ttf) format('truetype');
+}
+
+
+*
+{
+	font-family: raleway, 'Times New roman';
+}
+
+ul
+{
+	list-style-type: none;
+}
+
+nav
+{
+	display: flex;
+}
+
+.logo
+{
+	display: flex;
+}
+
+section
+{
+	background-color: #F2F2F2;
+	display: flex;
+}
+
+#Leshébergements
+{
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+
+#image1 #image2 #image3 #image4 #image5 #image6
+{
+	position: relative;
+	border: 4px white solid;
+}
+
+#description1 #description2 #description3 #description4 #descrption5 #description6
+{
+	position: absolute;
+	bottom: 0;
+	background-color: rgba (255,255,255, 1);
+	width: 100%;
+}
+
+footer
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+#filtres
+{
+	display: flex;
+}
+
+article img
+{
+
+}
