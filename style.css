@@ -3,18 +3,6 @@
 	font-style: normal;
 	src: url(fonts/raleway/raleway-Medium.ttf) format('truetype');
 }
-/* 
-@font-face{
-	font-family: "raleway";
-	font-weight: bold;
-	src: url(fonts/raleway/Raleway-Bold.ttf) format('truetype');
-}
-
-@font-face{
-	font-family: 'raleway';
-	font-style: italic;
-	src: url(font/raleway/Raleway-Italic.ttf) format('truetype');
-} */
 
 *{
 	font-family: raleway, 'Times New roman';
