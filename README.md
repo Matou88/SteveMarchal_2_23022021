@@ -1,6 +1,10 @@
 # P2 Steve Marchal
-sfs
 
-texte explicatif
+Voici le 2e projet de la formation.
 
-lien git [titre](http....)
+Reservia est un site de réservation d'hôtels, d'après 2 maquettes (mobile et desktop) j'ai donc reproduit au mieux en étant libre pour la dimension tablette.
+
+
+lien page web [Index.html]( https://matou88.github.io/SteveMarchal_2_23022021/)
+
+lien repository git [SteveMarchal_2_23022021](https://github.com/Matou88/SteveMarchal_2_23022021)
