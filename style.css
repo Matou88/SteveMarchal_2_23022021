@@ -1,8 +1,9 @@
 @font-face{
 	font-family: "raleway";
+	font-style: normal;
 	src: url(fonts/raleway/raleway-Medium.ttf) format('truetype');
 }
-
+/* 
 @font-face{
 	font-family: "raleway";
 	font-weight: bold;
@@ -13,7 +14,7 @@
 	font-family: 'raleway';
 	font-style: italic;
 	src: url(font/raleway/Raleway-Italic.ttf) format('truetype');
-}
+} */
 
 *{
 	font-family: raleway, 'Times New roman';
@@ -174,6 +175,10 @@ form{
 	margin-bottom: -2px;
 }
 
+#filtres li:hover{
+    background-color: #0065FC;
+}
+
 .fa-money-bill-wave, .fa-heart, .fa-dog{
 	padding: 15px;
 }
@@ -225,7 +230,23 @@ article a{
 }
 
 section h2, section p{
-	margin-left: 20px;
+	margin-left: 10px;
+}
+
+h3{
+	font-size: 1em;
+	padding: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: 10px;
+	margin-right: 20px;
+	font-weight: bold;
+}
+
+p{
+	padding: 0;
+	margin-top: 0px;
+	margin-bottom: 0;
 }
 
 .titre-populaires{
@@ -245,25 +266,27 @@ section h2, section p{
 	padding-bottom: 20px;
 }
 
-/* .articles-populaires{
+.articles-populaires{
 	display: flex;
 	flex-flow: column wrap;
 	align-items: center;
-} */
+}
 
 .populaires article{
-	height: 142px;
+	height: 122px;
+	width: 90%;
 	padding: 0px;
 	box-sizing: border-box;
 	border-radius: 20px;
 	margin-bottom: 10px;
-	box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+	box-shadow: 0 6px 6px rgba(0,0,0,0.2);
 	background-color: white;
+	position: relative;
 }
 
 .photos-populaires{
-	height: 130px;
-	width: 120px;
+	height: 110px;
+	width: 30%;
 	object-fit: cover;
 	margin-right: 10px;
 	float: left;
@@ -275,20 +298,17 @@ section h2, section p{
 }
 
 .descriptions-populaires{
-	height: 150px;
+	height: 122px;
+	width: 100%;
 	font-size: 0.9em;
-	margin: auto;
-	padding-top: 10px;
-	display: flex;
-	flex-flow: column wrap;
 }
 
 .notes{
-	position: absolute;
-	margin-top: 100px;
 	display: flex;
-	justify-content: flex-start;
-	align-content: center;
+	position: absolute;
+	bottom: 10px;
+	font-size: 0.8em;
+	margin-left: 35%;
 }
 
 .bleues{
@@ -307,49 +327,51 @@ section h2, section p{
 .leshebergements{
 	padding-bottom: 20px;
 	padding-top: 20px;
+	margin-right: 12px;
 }
 
 .articles-hebergements{
+	width: 100%;
 	display: flex;
-	flex-flow: column wrap;
-	align-items: center;
-	align-content: space-around;
+	flex-flow: row wrap;
+	justify-content: center;
+	margin-right: 12px;
 }
 
 .leshebergements article{
-	width: 312px;
+	width: 90%;
+	height: 200px;
 	position: relative;
 	margin-bottom: 10px;
 }
 
 .image{
-	height: 250px;
+	height: 150px;
 	width: 100%;
 	object-fit: cover;
 	border: 6px solid white;
 	border-radius: 20px;
-	box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+	box-shadow: 0 6px 6px rgba(0,0,0,0.2);
 }
 
 .description{
 	position: absolute;
 	background-color: rgba(255,255,255,1);
-	bottom: 0px;
 	width: 100%;
-	height: 30%;
+	height: 35%;
+	top: 65%;
 	border-left: 6px solid white;
 	border-right: 6px solid white;
 	border-bottom-left-radius: 20px;
 	border-bottom-right-radius: 20px;
-	box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+	box-shadow: 0 6px 6px rgba(0,0,0,0.2);
 }
 
 .noteshebergements{
 	position: absolute;
 	bottom: 2px;
 	display: flex;
-	justify-content: flex-start;
-	align-content: center;
+	left: 10px;
 }
 
 .leshebergements i{
@@ -372,7 +394,7 @@ section h2, section p{
 	height: 95%;
 	object-fit: cover;
 	border-radius: 20px;
-	box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+	box-shadow: 0 6px 6px rgba(0,0,0,0.2);
 }
 
 .photoactivite{
@@ -381,7 +403,8 @@ section h2, section p{
 }
 
 .activites article{
-	width: 312px;
+	width: 90%;
+	height: 200px;
 	position: relative;
 	margin-bottom: 10px;
 }
@@ -391,12 +414,12 @@ section h2, section p{
 	position: absolute;
 	background-color: rgba(255,255,255,1);
 	bottom: 0px;
-	width: 312px;
+	width: 100%;
 	height: 20%;
 	padding-top: 10px;
 	border-bottom-left-radius: 20px;
 	border-bottom-right-radius: 20px;
-	box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+	box-shadow: 0 6px 6px rgba(0,0,0,0.2);
 }
 
 .descriptionactivite strong{
@@ -434,6 +457,21 @@ footer li{
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+
+	h3{
+		font-size: 0.9em;
+		margin-left: 10px;
+		margin-right: 0;	
+	}
+
+	.populaires h3{
+		font-size: 1em;
+	}
+
+	.fa-chart-line{
+		display: none;
+	}
+
 	.entete{
 		display: none;
 	}
@@ -448,6 +486,22 @@ footer li{
 		color: #0065FC;
 		margin-left: 10px;
 		margin-right: 10px;
+	}
+
+	.logo{
+		margin-left: 0;
+	}
+
+	h1{
+		margin-left: 0;
+	}
+
+	header p{
+		margin-left: 0;
+	}
+
+	#filtres h2{
+		margin-left: 0;
 	}
 
 	.hautpage{
@@ -477,54 +531,80 @@ footer li{
 	}
 
 	.articles-hebergements{
-		display: flex;
 		flex-flow: row wrap;
 		justify-content: space-around;
 	}
-	
+ 
+	.info{
+		margin-left: 0px;
+	}
+
+	#filtres{
+		display: flex;
+		align-items: baseline;
+		margin-left: 0px;
+	}
+
 	.description{
 		width: 100%;
 	}
 
 	.leshebergements{
 		width: 65%;
-		height: 950px;
+		height: 750px;
 		background-color: #F2F2F2;
-		padding-right: 2%;
-		padding-left: 2%;
 		border-radius: 20px;
+		padding-right: 12px;
 	}
 
 	.leshebergements article{
-		width: 40%;
+		width: 45%;
+		margin-bottom: 20px;
 	}
 
 	.populaires{
 		width: 30%;
-		height: 950px;
+		height: 750px;
 		border-radius: 20px;
-		padding-bottom: 0px;
-	}
+		padding-bottom: 20px;
+	} 
 
 	.articles-populaires{
-		height: 600px;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
+		height: 700px;
+	}
+
+	.descriptions-populaires{
+		background-color: white;
+		position: absolute;
+		height: 65px;
+		width: 200px;
+		bottom: 0px;
+		padding-left: 12px;
+		border-bottom-left-radius: 25px;
+		border-bottom-right-radius: 25px;
+		display: inline-block;
+		font-size: 0.8em;
 	}
 
 	.articles-populaires article{
-		height: 200px;
+		height: 182px;
+		width: 212px;
+		position: relative;
+		padding: 0;
+		margin-bottom: 30px;
 	}
 
 	.photos-populaires{
-		width: 35%;
-		height: 180px;
-		object-fit: cover;
+		width: 200px;
+		height: 170px;
+		border-right: 6px solid white;
+		border-radius: 25px;
+		float: none;
 	}
 
 	.notes{
-		margin-top: 160px;
+		bottom: 5px;
+		margin-left: 10px;
 	}
 
 	.partie1{
@@ -535,20 +615,14 @@ footer li{
 
 	.activites{
 		width: 100%;
-		height: 600px;
-		display: block;
-		position: relative;
-		/* flex-wrap: wrap;
+		height: 650px;
+		flex-wrap: wrap;
 		justify-content: space-between;
-		align-items: flex-start; */
 	}
 
 	.articles-activites{
 		width: 100%;
 		height: 100%;
-		display: flex;
-		flex-wrap: wrap;
-		flex-direction: column;
 }
 
 	.activites article{
@@ -575,15 +649,9 @@ footer li{
 		height: 60%;
 	}
 
-	.photoactivite{
-		border: none;
-	}
-
 	.descriptionactivite{
-		height: 3em;
-		width: 90%;
-		padding-left: 10%;
-		border: none;
+		height: 50px;
+		width: 100%;
 	}
 
 	footer{
@@ -596,21 +664,64 @@ footer li{
 	.pied{
 		margin-right: 5%;
 	}
-
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+	.fa-chart-line{
+		display: block;
+	}
+
+	.articles-hebergements{
+		height: 450px;
+	}
+
 	.leshebergements article{
 		width: 30%;
+		padding-bottom: 20px;
+		height: 150px;
 	}
 
 	.leshebergements{
-		height: 700px;
+		height: 550px;
 	}
 
 	.populaires{
-		height: 700px;
+		height: 550px;
+	}
+
+	.populaires article{
+		height: 140px;
+		width: 90%;
+		padding: 0px;
+		margin-bottom: 20px;
+	}
+	
+	.photos-populaires{
+		height: 128px;
+		width: 40%;
+		object-fit: cover;
+		margin-right: 0px;
+		float: left;
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+	
+	.descriptions-populaires{
+		height: 140px;
+		width: 50%;
+		font-size: 0.9em;
+		margin: 0;
+		padding: 0;
+	}
+	
+	.descriptions-populaires h3{
+		margin-left: 0;
+		margin-bottom: 5px;
+	}
+
+	.descriptions-populaires p, .notes{
+		margin-left: 0;
 	}
 
 	.pied{
