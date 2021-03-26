@@ -185,7 +185,7 @@ form{
 }
 
 #filtres li{
-	border: 2px solid #bbb3b3;
+	border: 2px solid rgba(0, 0, 0, 0.1);
 	border-radius: 2em;
 	padding-right: 10px;
 	margin-right: 10px;
@@ -203,7 +203,7 @@ form{
 .info i{
 	font-size: 0.8em;
 	color: #0065FC;
-	border: 1px solid grey;
+	border: 1px solid rgba(0, 0, 0, 0.1);
 	padding-right: 7px;
 	padding-left: 7px;
 	padding-top: 4px;
@@ -292,6 +292,10 @@ p{
 
 .descriptions-populaires{
 	height: 122px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-around;
 }
 
 .descriptions-populaires p{
@@ -299,17 +303,14 @@ p{
 }
 
 .articles-populaires h3{
-	margin-top: 10px;
-	margin-bottom: 10px;
 	font-size: 0.9em;
 }
 
 .notes{
 	display: flex;
-	position: absolute;
-	bottom: 10px;
-	font-size: 0.8em;
-	margin-left: 40%;
+	margin-top: 30px;
+	font-size: 0.7em;
+	margin-left: 10px;
 }
 
 .bleues{
@@ -346,6 +347,10 @@ p{
 	margin-bottom: 10px;
 }
 
+.articles-hebergements p{
+	font-size: 0.8em;
+}
+
 .image{
 	height: 150px;
 	width: 100%;
@@ -357,6 +362,10 @@ p{
 
 .description{
 	position: absolute;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-around;
 	background-color: rgba(255,255,255,1);
 	width: 100%;
 	height: 35%;
@@ -369,14 +378,18 @@ p{
 }
 
 .noteshebergements{
-	position: absolute;
-	bottom: 2px;
 	display: flex;
-	left: 10px;
+	align-items: flex-end;
+	margin-left: 10px;
+	font-size: 0.9em;
 }
 
 .leshebergements i{
 	font-size: 0.8em;
+}
+
+.plus strong{
+	color: black;
 }
 
 .activites{
@@ -467,6 +480,8 @@ footer li{
 
 	.populaires h3{
 		font-size: 1em;
+		margin-top: 3px;
+		margin-bottom: 3px;
 	}
 
 	.fa-chart-line{
@@ -480,13 +495,28 @@ footer li{
 	.entete2{
 		display: inline-block;
 		width: 100%;
+		padding-top: 30px;
 	}
 
 	nav a{
-		width: auto;
+		margin-left: 50px;
+		padding-top: 30px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.inscription a{
 		color: #0065FC;
-		margin-left: 10px;
-		margin-right: 10px;
+		font-family: raleway_bold, 'Times New Roman';
+	}
+
+	nav a:hover{
+		color: #0065FC;
+		border-top: 3px solid #0065FC;
+	}
+
+	nav .inscription a:hover{
+		border-top: none;
 	}
 
 	.logo{
@@ -532,11 +562,29 @@ footer li{
 		font-size: 0.9em;
 	}
 
+	a .photos-populaires:hover{
+		border: none;
+		width: 100%;
+	}
+
 	.articles-hebergements{
 		flex-flow: row wrap;
 		justify-content: space-around;
 	}
- 
+
+	.noteshebergements{
+		font-size: 0.9em;
+		margin-top: 0;
+	}
+
+	.articles-hebergements article:hover{
+		width: 50%;
+	}
+
+	.plus strong:hover{
+		color: #0065FC;
+	}
+
 	.info{
 		margin-left: 0px;
 	}
@@ -545,10 +593,6 @@ footer li{
 		display: flex;
 		align-items: baseline;
 		margin-left: 0px;
-	}
-
-	.description{
-		width: 100%;
 	}
 
 	.leshebergements{
@@ -578,13 +622,11 @@ footer li{
 	.descriptions-populaires{
 		background-color: white;
 		position: absolute;
-		height: 65px;
-		width: 200px;
+		height: 35%;
+		width: 100%;
 		bottom: 0px;
-		padding-left: 12px;
-		border-bottom-left-radius: 25px;
-		border-bottom-right-radius: 25px;
-		display: inline-block;
+		border-bottom-left-radius: 20px;
+		border-bottom-right-radius: 20px;
 		font-size: 0.8em;
 	}
 
@@ -600,13 +642,18 @@ footer li{
 		width: 200px;
 		height: 170px;
 		border-right: 6px solid white;
-		border-radius: 25px;
+		border-radius: 20px;
 		float: none;
 	}
 
 	.notes{
-		bottom: 5px;
 		margin-left: 10px;
+		margin-top: 0;
+		margin-left: 15px;
+	}
+
+	.descriptions-populaires h3, .descriptions-populaires p{
+		margin-left: 15px;
 	}
 
 	.partie1{
@@ -629,6 +676,10 @@ footer li{
 
 	.activites article{
 		width: 22%;
+	}
+
+	.activites article:hover{
+		width: 30%;
 	}
 
 	.activites article:nth-last-child(1){
@@ -656,15 +707,16 @@ footer li{
 		width: 100%;
 	}
 
-	footer{
+	.footer{
 		display: flex;
-		flex-direction: row;
-		justify-content: flex-start;
+		justify-content: space-around;
 		flex-wrap: wrap;
+		margin-left: 0;
 	}
-    
-	.pied{
-		margin-right: 5%;
+
+	.footer a:hover{
+		text-decoration: underline;
+		font-family: 'raleway_bold';
 	}
 }
 
@@ -688,6 +740,12 @@ footer li{
 		height: 550px;
 	}
 
+	.articles-hebergements article:hover{
+		background-color: rgba(255, 255, 255, 0.1);
+		width: 40%;
+		height: 40%;
+	}
+
 	.populaires{
 		height: 550px;
 	}
@@ -697,44 +755,52 @@ footer li{
 		width: 90%;
 		padding: 0px;
 		margin-bottom: 20px;
+		display: flex;
 	}
 	
+	.populaires h3{
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
 	.photos-populaires{
 		height: 128px;
 		width: 40%;
 		object-fit: cover;
 		margin-right: 0px;
-		float: left;
 		border-top-right-radius: 0;
 		border-bottom-right-radius: 0;
+		display: inline-block;
 	}
 	
 	.descriptions-populaires{
 		height: 140px;
 		width: 50%;
 		font-size: 0.9em;
-		margin: 0;
-		padding: 0;
+		display: inline-flex;
+		justify-content: space-around;
+	}
+
+	a .photos-populaires:hover{
+		width: 50%;
+		border: 6px solid white;
+	}
+
+	.notes{
+		margin-top: 30px;
 	}
 	
 	.descriptions-populaires h3{
 		margin-left: 0;
-		margin-bottom: 5px;
 	}
 
 	.descriptions-populaires p, .notes{
 		margin-left: 0;
 	}
 
-	.pied{
-		margin-right: 10%;
-	}
-
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-	.pied{
-		margin-right: 15%;
-	}
+
 }
