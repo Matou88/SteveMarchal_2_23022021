@@ -167,6 +167,7 @@ form{
 	margin-left: -3px;
 	margin-top: -2px;
 	margin-bottom: -2px;
+	margin-right: 10px;
 }
 
 #filtres li:hover{
@@ -187,8 +188,8 @@ form{
 #filtres li{
 	border: 2px solid rgba(0, 0, 0, 0.1);
 	border-radius: 2em;
-	padding-right: 10px;
-	margin-right: 10px;
+	padding-right: 20px;
+	margin-right: 20px;
 	margin-bottom: 10px;
 }
 
@@ -275,6 +276,11 @@ p{
 	box-shadow: 0 6px 6px rgba(0,0,0,0.2);
 	background-color: white;
 	position: relative;
+	transition: all .7s
+}
+
+.populaires article:hover{
+	opacity: .5;
 }
 
 .photos-populaires{
@@ -288,6 +294,11 @@ p{
 	border-bottom: 6px solid white;
 	border-bottom-left-radius: 20px;
 	border-top-left-radius: 20px;
+	transition: all .7s
+}
+
+.articles-populaires article:hover .photos-populaires{
+	object-position: bottom right;
 }
 
 .descriptions-populaires{
@@ -351,13 +362,18 @@ p{
 	font-size: 0.8em;
 }
 
-.image{
+.articles-hebergements article .image{
 	height: 150px;
 	width: 100%;
 	object-fit: cover;
 	border: 6px solid white;
 	border-radius: 20px;
 	box-shadow: 0 6px 6px rgba(0,0,0,0.2);
+	transition: all .3s;
+}
+
+.articles-hebergements article:hover .image{
+	object-position: bottom left;
 }
 
 .description{
@@ -409,6 +425,7 @@ p{
 	object-fit: cover;
 	border-radius: 20px;
 	box-shadow: 0 6px 6px rgba(0,0,0,0.2);
+	transition: all .7s;
 }
 
 .photoactivite{
@@ -421,6 +438,14 @@ p{
 	height: 200px;
 	position: relative;
 	margin-bottom: 10px;
+}
+
+.activites article:hover{
+	opacity: .5;
+}
+
+.activites article:hover .photoactivite{
+	object-position: right;
 }
 
 .descriptionactivite{
@@ -562,11 +587,6 @@ footer li{
 		font-size: 0.9em;
 	}
 
-	a .photos-populaires:hover{
-		border: none;
-		width: 100%;
-	}
-
 	.articles-hebergements{
 		flex-flow: row wrap;
 		justify-content: space-around;
@@ -578,7 +598,7 @@ footer li{
 	}
 
 	.articles-hebergements article:hover{
-		width: 50%;
+		opacity: .5;
 	}
 
 	.plus strong:hover{
@@ -679,10 +699,6 @@ footer li{
 		width: 22%;
 	}
 
-	.activites article:hover{
-		width: 30%;
-	}
-
 	.activites article:nth-last-child(1){
 		height: 45%;
 	}
@@ -731,20 +747,15 @@ footer li{
 		height: 450px;
 	}
 
-	.leshebergements article{
-		width: 30%;
-		padding-bottom: 20px;
-		height: 150px;
-	}
-
 	.leshebergements{
 		height: 550px;
 	}
 
-	.articles-hebergements article:hover{
-		background-color: rgba(255, 255, 255, 0.1);
-		width: 40%;
-		height: 40%;
+	.leshebergements article{
+		width: 30%;
+		padding-bottom: 20px;
+		height: 150px;
+		transition: all 0.3s;
 	}
 
 	.populaires{
@@ -780,11 +791,6 @@ footer li{
 		font-size: 0.9em;
 		display: inline-flex;
 		justify-content: space-around;
-	}
-
-	a .photos-populaires:hover{
-		width: 50%;
-		border: 6px solid white;
 	}
 
 	.notes{
