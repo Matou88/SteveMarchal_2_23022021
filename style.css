@@ -883,8 +883,8 @@ footer li{
 	}
 
 	.photos-populaires{
-		height: 89%;
-		width: 35%;
+		height: 98px;
+		width: 100px;
 		object-fit: cover;
 		margin-right: 0px;
 		border-top-right-radius: 0;
@@ -900,7 +900,7 @@ footer li{
 		font-size: 0.9em;
 		display: inline-flex;
 		justify-content: flex-start;
-
+		border-top-right-radius: 20px;
 	}
 
 	.notes{
@@ -943,6 +943,11 @@ footer li{
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+
+	.photos-populaires{
+		width: 120px;
+	}
+
 	.footer .pied{
 		margin-right: 200px;
 	}
