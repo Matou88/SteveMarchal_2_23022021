@@ -871,6 +871,7 @@ footer li{
 	.populaires article{
 		height: 110px;
 		width: 90%;
+		border-radius: 20px;
 		padding: 0px;
 		margin-bottom: 20px;
 		display: flex;
@@ -882,22 +883,24 @@ footer li{
 	}
 
 	.photos-populaires{
-		height: 98px;
+		height: 89%;
 		width: 35%;
 		object-fit: cover;
 		margin-right: 0px;
 		border-top-right-radius: 0;
 		border-bottom-right-radius: 0;
-		display: inline-block;
+		display: block;
+		float: left;
 	}
 	
 	.descriptions-populaires{
-		height: 110px;
+		height: 100%;
 		margin-left: 10px;
 		width: 50%;
 		font-size: 0.9em;
 		display: inline-flex;
 		justify-content: flex-start;
+
 	}
 
 	.notes{
