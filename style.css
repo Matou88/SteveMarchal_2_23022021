@@ -113,13 +113,14 @@ form{
 }
 
 .barre-recherche{
-	width: 200px;
+	width: 250px;
 	height: 40px;
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	border-right: none;
 	border-left: none;
 	margin-bottom: 10px;
 	font-weight: bold;
+	font-size: 1em;
 	padding-left: 10px;
 }
 
@@ -223,14 +224,19 @@ article a{
 	color: black;
 }
 
-section h2, section p{
+section p{
 	margin-left: 10px;
+}
+
+section h2{
+	font-size: 1.1em;
+	margin-left: 15px;
 }
 
 h3{
 	font-size: 1em;
 	padding: 0;
-	margin-top: 0;
+	margin-top: 10px;
 	margin-bottom: 0;
 	margin-left: 10px;
 	margin-right: 20px;
@@ -247,11 +253,12 @@ p{
 	display: flex;
 	justify-content: space-between;
 	align-items: baseline;
+	padding-bottom: 10px;
 }
 
 .icone-populaires{
-	font-size: 1.3em;
-	margin-right: 10px;
+	font-size: 1.1em;
+	margin-right: 15px;
 }
 
 .populaires{
@@ -311,6 +318,7 @@ p{
 
 .descriptions-populaires p{
 	font-size: 0.8em;
+	margin-bottom: 30px;
 }
 
 .articles-populaires h3{
@@ -319,8 +327,8 @@ p{
 
 .notes{
 	display: flex;
-	margin-top: 30px;
-	font-size: 0.7em;
+	margin-bottom: 5px;
+	font-size: 0.6em;
 	margin-left: 10px;
 }
 
@@ -331,10 +339,6 @@ p{
 .grises{
 	color: rgba(63, 63, 63, 0.2);
 	margin-left: 2px;
-}
-
-.notes span{
-	font-size: 0.7em;
 }
 
 .leshebergements{
@@ -356,6 +360,12 @@ p{
 	height: 200px;
 	position: relative;
 	margin-bottom: 10px;
+	transition: all .7s;
+}
+
+.articles-hebergements h3{
+	font-size: 0.9em;
+	margin-top: 0;
 }
 
 .articles-hebergements p{
@@ -369,7 +379,7 @@ p{
 	border: 6px solid white;
 	border-radius: 20px;
 	box-shadow: 0 6px 6px rgba(0,0,0,0.2);
-	transition: all .3s;
+	transition: all .7s;
 }
 
 .articles-hebergements article:hover .image{
@@ -397,11 +407,7 @@ p{
 	display: flex;
 	align-items: flex-end;
 	margin-left: 10px;
-	font-size: 0.9em;
-}
-
-.leshebergements i{
-	font-size: 0.8em;
+	font-size: 0.6em;
 }
 
 .plus strong{
@@ -425,12 +431,6 @@ p{
 	object-fit: cover;
 	border-radius: 20px;
 	box-shadow: 0 6px 6px rgba(0,0,0,0.2);
-	transition: all .7s;
-}
-
-.photoactivite{
-	display: flex;
-	justify-content: center;
 }
 
 .activites article{
@@ -438,14 +438,15 @@ p{
 	height: 200px;
 	position: relative;
 	margin-bottom: 10px;
+	transition: all .7s;
 }
 
 .activites article:hover{
 	opacity: .5;
 }
 
-.activites article:hover .photoactivite{
-	object-position: right;
+.activites article:hover .descriptionactivite{
+	background-color: rgba(255,255,255,0) ;
 }
 
 .descriptionactivite{
@@ -459,6 +460,7 @@ p{
 	border-bottom-left-radius: 20px;
 	border-bottom-right-radius: 20px;
 	box-shadow: 0 6px 6px rgba(0,0,0,0.2);
+	transition: all .7s;
 }
 
 .descriptionactivite strong{
@@ -472,6 +474,10 @@ footer{
 	padding-bottom: 10px;
 }
 
+footer h2{
+	font-size: 1.1em;
+}
+
 footer a{
 	color: black;
 }
@@ -482,6 +488,11 @@ footer ul{
 
 footer li{
 	margin-bottom: 15px;
+}
+
+.footer{
+	width: 90%;
+	margin: auto;
 }
 
 .pied{
@@ -504,13 +515,13 @@ footer li{
 	}
 
 	.populaires h3{
-		font-size: 1em;
-		margin-top: 3px;
-		margin-bottom: 3px;
+		margin-top: 0;
+		margin-bottom: 0;
+		margin-right: 5px;
 	}
 
-	.fa-chart-line{
-		display: none;
+	.descriptions-populaires p{
+		margin-bottom: 0px;
 	}
 
 	.entete{
@@ -587,13 +598,17 @@ footer li{
 		font-size: 0.9em;
 	}
 
+	.barre-recherche{
+		width: auto;
+	}
+
 	.articles-hebergements{
 		flex-flow: row wrap;
-		justify-content: space-around;
+   		align-items: center;
+  		justify-content: space-around;
 	}
 
 	.noteshebergements{
-		font-size: 0.9em;
 		margin-top: 0;
 	}
 
@@ -617,26 +632,28 @@ footer li{
 
 	.leshebergements{
 		width: 65%;
-		height: 750px;
+		height: 650px;
 		background-color: #F2F2F2;
 		border-radius: 20px;
 		padding-right: 12px;
 	}
 
 	.leshebergements article{
-		width: 45%;
+		width: 40%;
 		margin-bottom: 20px;
+		height: auto;
 	}
 
 	.populaires{
 		width: 30%;
-		height: 750px;
+		height: 650px;
 		border-radius: 20px;
 		padding-bottom: 20px;
 	} 
 
 	.articles-populaires{
-		height: 700px;
+		height: 600px;
+		justify-content: space-around;
 	}
 
 	.descriptions-populaires{
@@ -647,7 +664,6 @@ footer li{
 		bottom: 0px;
 		border-bottom-left-radius: 20px;
 		border-bottom-right-radius: 20px;
-		font-size: 0.8em;
 	}
 
 	.articles-populaires article{
@@ -655,7 +671,6 @@ footer li{
 		width: 212px;
 		position: relative;
 		padding: 0;
-		margin-bottom: 30px;
 	}
 
 	.photos-populaires{
@@ -667,8 +682,8 @@ footer li{
 	}
 
 	.notes{
-		margin-left: 10px;
 		margin-top: 0;
+		margin-bottom: 0;
 		margin-left: 15px;
 	}
 
@@ -683,51 +698,77 @@ footer li{
 	}
 
 	.activites{
-		width: 100%;
-		height: 650px;
-		flex-wrap: wrap;
-		justify-content: space-between;
+		padding-bottom: 40px;
+	}
+
+	.activites h2{
+		margin-left: 0;
+	}
+
+	.activites h3{
+		margin-top: auto;
+		margin-bottom: auto;
 	}
 
 	.articles-activites{
 		width: 100%;
+		height: 300px;
+		justify-content: space-between;
+		align-content: space-between;
+	}
+
+	.photoactivite{
 		height: 100%;
-}
+	}
 
 	.activites article{
-		width: 22%;
+		width: 23%;
+		margin-bottom: 0;
 	}
 
 	.activites article:nth-last-child(1){
-		height: 45%;
+		height: 50%;
 	}
 
 	.activites article:nth-last-child(2){
-		height: 45%;
+		height: 40%;
 	}
 
 	.activites article:nth-last-child(3n){
-		height: 600px;
+		height: 300px;
 	}
 
 	.activites article:nth-last-child(4){
-		height: 30%;
+		height: 40%;
 	}
 
 	.activites article:nth-last-child(5){
-		height: 60%;
+		height: 50%;
 	}
 
 	.descriptionactivite{
-		height: 50px;
+		height: 45px;
 		width: 100%;
+		padding-top: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.descriptionactivite h3{
+		margin-left: 15px;
 	}
 
 	.footer{
 		display: flex;
-		justify-content: space-around;
+		justify-content: space-between;
 		flex-wrap: wrap;
-		margin-left: 0;
+		width: 95%;
+	}
+
+	.pied{
+		margin: 0;
+		padding: 0;
 	}
 
 	.footer a:hover{
@@ -738,31 +779,69 @@ footer li{
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-	.fa-chart-line{
-		display: block;
+
+	section h2{
+		margin-left: 20px;
+	}
+
+	.plus strong{
+		margin-left: 10px;
+	}
+
+	.plus{
+		margin-top: 20px;
 	}
 
 	.articles-hebergements{
-		height: 450px;
+		height: 330px;
 	}
 
 	.leshebergements{
-		height: 550px;
+		width: 67%;
+		height: 440px;
+		padding-top: 10px;
+		padding-bottom: 0;
 	}
 
 	.leshebergements article{
-		width: 30%;
+		width: 28%;
 		padding-bottom: 20px;
-		height: 150px;
+		height: 110px;
 		transition: all 0.3s;
 	}
 
-	.populaires{
-		height: 550px;
+	.articles-hebergements article .image{
+		height: 100%;
 	}
 
+	.leshebergements article h3{
+		font-size: 0.9em;
+	}
+
+	.leshebergements article p{
+		margin-bottom: 5px;
+	}
+
+	.description{
+		font-size: 0.9em;
+		top: 75%;
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+
+	.populaires{
+		height: 440px;
+		width: 29%;
+		padding-top: 10px;
+		padding-bottom: 0;
+	}
+
+	.articles-populaires{
+		height: 380px;
+	}
+	
 	.populaires article{
-		height: 140px;
+		height: 105px;
 		width: 90%;
 		padding: 0px;
 		margin-bottom: 20px;
@@ -775,8 +854,8 @@ footer li{
 	}
 
 	.photos-populaires{
-		height: 128px;
-		width: 40%;
+		height: 93px;
+		width: 35%;
 		object-fit: cover;
 		margin-right: 0px;
 		border-top-right-radius: 0;
@@ -785,15 +864,16 @@ footer li{
 	}
 	
 	.descriptions-populaires{
-		height: 140px;
+		height: 105px;
+		margin-left: 10px;
 		width: 50%;
 		font-size: 0.9em;
 		display: inline-flex;
-		justify-content: space-around;
+		justify-content: flex-start;
 	}
 
 	.notes{
-		margin-top: 30px;
+		margin-top: 20px;
 	}
 	
 	.descriptions-populaires h3{
@@ -804,9 +884,27 @@ footer li{
 		margin-left: 0;
 	}
 
+	.articles-activites{
+		height: 370px;
+	}
+
+	.activites article:nth-last-child(3n){
+		height: 370px;
+	}
+
+	.footer{
+		justify-content: flex-start;
+	}
+
+	.footer .pied{
+		margin-right: 120px;
+	}
+
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-
+	.footer .pied{
+		margin-right: 200px;
+	}
 }
