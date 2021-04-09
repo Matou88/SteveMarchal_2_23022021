@@ -22,10 +22,13 @@ h1, h2, h3, strong, .inscription, input{
 	width: 95%;
 	margin: auto;
 	max-width: 1200px;
+	position: relative;
 }
 
-.entete2{
-	display: none;
+.entete2 .inscription{
+	position: absolute;
+	top: 19px;
+	right: 20px;
 }
 
 a{
@@ -39,17 +42,19 @@ a{
 	margin-left: 20px;
 }
 
-.titre1{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-bottom: 20px;
-	font-weight: bold;
+.inscription a{
+	color: #0065FC;
+	font-family: raleway_bold, 'Times New Roman';
 }
 
-.titre1 a{
-	font-family: "raleway_bold", 'raleway', "Times New roman";
-	color: #0065FC;
+header nav ul .lien{
+	border-bottom: 3px solid rgba(0, 0, 0, 0.1);
+	width: 50%;
+	padding-bottom: 10px
+}
+
+header nav ul .lien:hover{
+	border-bottom: 3px solid #0065FC;
 }
 
 li{
@@ -61,21 +66,12 @@ li{
 	width: 50%;
 }
 
-hr{
-	display: none;
-}
-
-.hr{
-	height: 3px;
-	background-color: rgba(0, 0, 0, 0.2);
-	margin-top: 10px;
-}
-
 nav ul{
 	display: flex;
 	padding-left: 0;
 	flex-flow: row wrap;
 	justify-content: space-around;
+	text-align: center;
 }
 
 nav a{
@@ -529,14 +525,15 @@ footer li{
 		margin-bottom: 0px;
 	}
 
-	.entete{
-		display: none;
-	}
-
 	.entete2{
-		display: inline-block;
 		width: 100%;
 		padding-top: 30px;
+	} 
+
+	.entete2 .inscription{
+		position: relative;
+		top: 0;
+		right: 0;
 	}
 
 	nav a{
@@ -547,14 +544,29 @@ footer li{
 		font-size: 0.8em;
 	}
 
-	.inscription a{
-		color: #0065FC;
-		font-family: raleway_bold, 'Times New Roman';
+	header nav ul .lien{
+		border-bottom: none;
+		width: auto;
+		padding-bottom: 0;
+		padding: auto;
+	}
+	
+	nav ul{
+		display: flex;
+		padding-left: 0;
+		flex-flow: row wrap;
+		justify-content: space-around;
+		text-align: left;
+	}
+
+	header nav ul .lien:hover{
+		border-bottom: none;
 	}
 
 	nav a:hover{
 		color: #0065FC;
 		border-top: 3px solid #0065FC;
+		border-bottom: none;
 	}
 
 	nav .inscription a:hover{
